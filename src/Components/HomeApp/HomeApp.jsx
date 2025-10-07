@@ -6,12 +6,10 @@ import demo1 from '../../assets/demo-app (1).webp'
 const HomeApp = ({appInfo}) => {
     return (
         <div className="card bg-base-100 p-4 shadow-sm">
-  <figure className="">
     <img
       src={demo1}
       alt="Apps Logo"
-      className="rounded-xl h-80 object-cover mx-auto" />
-  </figure>
+      className="rounded-xl object-fill mx-auto" />
   <div className='font-medium text-xl text-[#001931] mt-4 text-start'>
     <p>{appInfo.title}</p>
   </div>

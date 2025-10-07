@@ -7,7 +7,7 @@ const HomeApps = ({homeAppsDataPromise}) => {
     console.log(homeAppsData)
     return (
         <div>
-            <div className='grid grid-cols-4 gap-4 text-center'>
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center'>
             
             {
                 homeAppsData.map(appInfo => <HomeApp key={appInfo.id} appInfo={appInfo}></HomeApp>)

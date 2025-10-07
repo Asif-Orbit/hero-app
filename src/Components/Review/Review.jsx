@@ -4,7 +4,7 @@ const Review = () => {
     return (
         <div className='text-[#FFFFFF] bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-center'>
             <h1 className='text-3xl md:text-5xl font-bold pt-20 mb-10 md:mb-20'>Trusted by Millions, Built for You</h1>
-            <div className='flex flex-col md:flex-row justify-center gap-10 md:gap-36 pb-20'>
+            <div className='flex flex-col md:flex-row justify-center gap-10 md:gap-24 lg:gap-36 pb-20'>
                 <div>
                     <p className='text-xs'>Total Downloads</p>
                     <h1 className='text-6xl font-extrabold'>29.6M</h1>
