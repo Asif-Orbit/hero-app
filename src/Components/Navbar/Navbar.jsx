@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
-import { Link} from 'react-router';
-import { FaGithub } from "react-icons/fa6";
+import { Link } from 'react-router';
+import { FaGithub } from "react-icons/fa";
+
 
 const Navbar = () => {
     return (
-        <div className=' shadow-xs'>
+        <div className='bg-base-100 shadow-xs'>
             <div className="navbar  max-w-11/12 mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -14,28 +15,34 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><a>I</a></li>
-                            <li><a>Item 3</a></li>
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 font-medium shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Apps</a></li>
+                            <li><a>Installation</a></li>
                         </ul>
                     </div>
 
                     {
-                        <Link to='/'><div className='flex gap-1 justify-center items-center cursor-pointer'>
-                            <img src={logo} alt="" className='w-10 h-10' />
-                            <a className=" text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">HERO.IO</a>
-                        </div></Link>
+                        <Link to='/'>
+                            <div className='flex gap-1 justify-center items-center cursor-pointer'>
+                                <img src={logo} alt="" className='w-10 h-10' />
+                                <a className=" text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">HERO.IO</a>
+                            </div></Link>
                     }
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 font-medium">
                         <li><a>Home</a></li>
                         <li><a>Apps</a></li>
                         <li><a>Installation</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn"><FaGithub />Button</a>
+                    {
+                        <Link to="https://github.com/Asif-Orbit/hero-app">
+                            <a className="btn bg-gradient-to-r font-semibold text-[#FFFFFF] from-[#632EE3] to-[#9F62F2]"><FaGithub size={20} />Contribute</a>
+                        </Link>
+                    }
                 </div>
             </div>
         </div>
