@@ -3,7 +3,6 @@ import logo from '../../assets/logo.png'
 import { Link } from 'react-router';
 import { FaGithub } from "react-icons/fa";
 
-
 const Navbar = () => {
     return (
         <div className='bg-base-100 shadow-xs'>
@@ -26,7 +25,7 @@ const Navbar = () => {
                         <Link to='/'>
                             <div className='flex gap-1 justify-center items-center cursor-pointer'>
                                 <img src={logo} alt="" className='w-10 h-10' />
-                                <a className=" text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">HERO.IO</a>
+                                <p className=" text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">HERO.IO</p>
                             </div></Link>
                     }
                 </div>
@@ -37,10 +36,10 @@ const Navbar = () => {
                         <li><a>Installation</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end cursor-pointer">
                     {
                         <Link to="https://github.com/Asif-Orbit/hero-app">
-                            <a className="btn bg-gradient-to-r font-semibold text-[#FFFFFF] from-[#632EE3] to-[#9F62F2]"><FaGithub size={20} />Contribute</a>
+                            <p className="btn bg-gradient-to-r font-semibold text-[#FFFFFF] from-[#632EE3] to-[#9F62F2]"><FaGithub size={20} />Contribute</p>
                         </Link>
                     }
                 </div>

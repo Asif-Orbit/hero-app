@@ -7,7 +7,7 @@ const ErrorPage = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <div className='flex flex-col justify-center items-center mt-10'>
+            <div className='flex flex-col text-center items-center mt-10'>
                 <img src={errorPage} alt="" />
                 <h1 className='font-semibold text-5xl text-black mt-5 mb-5'>Oops, page not found!</h1>
                 <p className='text-[#627382]'>The page you are looking for is not available.</p>
