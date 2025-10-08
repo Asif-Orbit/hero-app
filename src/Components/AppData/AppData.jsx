@@ -1,7 +1,6 @@
 import React, { use } from 'react';
 import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
-import demo1 from '../../assets/demo-app (1).webp'
 import { Link } from 'react-router';
 const AppData = ({ AppsDataPromise }) => {
     const AppsData = use(AppsDataPromise)
@@ -15,9 +14,9 @@ const AppData = ({ AppsDataPromise }) => {
                         <Link to={`/apps/details/${data.id}`} key={data.id}>
                         <div className="card bg-base-100 p-4 shadow-sm" >
                             <img
-                                src={demo1}
+                                src={data.image}
                                 alt="Apps Logo"
-                                className="rounded-xl object-fill mx-auto" />
+                                className="rounded-xl h-full object-fill mx-auto" />
                             <div className='font-medium text-xl text-[#001931] mt-4 text-start'>
                                 <p>{data.title}</p>
                             </div>

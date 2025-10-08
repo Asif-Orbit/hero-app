@@ -1,6 +1,6 @@
 [
-  {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg",
+ {
+    "image": "https://i.ibb.co/zVXZCkzQ/image.png",
     "title": "Spotify",
     "companyName": "Spotify AB",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+    "image": "https://i.ibb.co/czZVB1Q/image.png",
     "title": "WhatsApp Messenger",
     "companyName": "Meta Platforms Inc.",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg",
+    "image": "https://i.ibb.co/7xYMxctv/image.png",
     "title": "Instagram",
     "companyName": "Meta Platforms Inc.",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg",
+    "image": "https://i.ibb.co/Mx1BFKXg/image.png",
     "title": "Telegram",
     "companyName": "Telegram FZ-LLC",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo.svg",
+    "image": "https://i.ibb.co/prBxmn7N/image.png",
     "title": "TikTok",
     "companyName": "ByteDance",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_2017.svg",
+    "image": "https://i.ibb.co/HDgDym9n/image.png",
     "title": "YouTube",
     "companyName": "Google LLC",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Snapchat_logo.svg",
+    "image": "https://i.ibb.co/gM0dVpzt/image.png",
     "title": "Snapchat",
     "companyName": "Snap Inc.",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/CapCut_logo.svg",
+    "image": "https://i.ibb.co/Kx8sXcdk/image.png",
     "title": "CapCut",
     "companyName": "Bytedance Pte. Ltd.",
     "id": 8,

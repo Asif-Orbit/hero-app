@@ -1,13 +1,30 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
     const links = <>
-     <Link to="/"><li className='m-2'>Home</li></Link>
-      <Link to="/apps"><li className='m-2'>Apps</li></Link>
-      <Link><li className='m-2'>Installation</li></Link>
+        <ul className="flex ">
+            <li>
+                <NavLink to="/" className={({ isActive }) => isActive ? " font-semibold rounded-none border-b-2 border-[#9F62F2]  text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]" : "text-[#00000090] font-medium"}>
+                    Home
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink to="/apps" className={({ isActive }) => isActive ? "font-semibold rounded-none border-b-2 border-[#9F62F2]  text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]" : "text-[#00000090] font-medium"}>
+                    Apps
+                </NavLink>
+            </li>
+
+            <li>
+                <NavLink to="/installation" className={({ isActive }) => isActive ? " font-semibold rounded-none border-b-2 border-[#9F62F2]  text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]" : "text-[#00000090] font-medium"}>
+                    Installation
+                </NavLink>
+            </li>
+        </ul>
+
     </>
     return (
         <div className='bg-base-100 shadow-xs'>
@@ -28,7 +45,7 @@ const Navbar = () => {
                         <Link to='/'>
                             <div className='flex gap-1 justify-center items-center cursor-pointer'>
                                 <img src={logo} alt="" className='w-10 h-10' />
-                                <p className=" text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">HERO.IO</p>
+                                <p className="  text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">HERO.IO</p>
                             </div></Link>
                     }
                 </div>
@@ -36,10 +53,10 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal px-1 font-medium">
                         {
                             links
-                           
+
                         }
-                        
-                        
+
+
                     </ul>
                 </div>
                 <div className="navbar-end cursor-pointer">

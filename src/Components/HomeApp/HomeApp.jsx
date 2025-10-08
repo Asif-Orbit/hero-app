@@ -1,7 +1,6 @@
 import React from 'react';
 import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
-import demo1 from '../../assets/demo-app (1).webp'
 import { Link } from 'react-router';
 
 const HomeApp = ({appInfo}) => {
@@ -9,7 +8,7 @@ const HomeApp = ({appInfo}) => {
         <Link to={`/apps/details/${appInfo.id}`}>
         <div className="card bg-base-100 p-4 shadow-sm">
     <img
-      src={demo1}
+      src={appInfo.image}
       alt="Apps Logo"
       className="rounded-xl object-fill mx-auto" />
   <div className='font-medium text-xl text-[#001931] mt-4 text-start'>
