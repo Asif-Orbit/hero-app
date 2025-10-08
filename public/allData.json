@@ -358,18 +358,4 @@
       { "name": "4 star", "count": 900000 },
       { "name": "5 star", "count": 2350000 }
     ]
-  },
-  {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Tinder_flame_logo.svg",
-    "title": "Tinder",
-    "companyName": "Match Group",
-    "id": 21,
-    "description": "Swipe, match, and chat with new people around you.",
-    "size": 85,
-    "reviews": "3.2M",
-    "ratingAvg": 4.0,
-    "downloads": "700M",
-    "ratings": [
-      { "name": "1 star", "count": 400000 },
-      { "name": "2 star", "count": 200000 },
-      { "name": "3
+  }]

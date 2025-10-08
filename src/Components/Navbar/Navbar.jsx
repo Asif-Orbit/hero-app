@@ -4,6 +4,11 @@ import { Link } from 'react-router';
 import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
+    const links = <>
+     <Link to="/"><li className='m-2'>Home</li></Link>
+      <Link to="/apps"><li className='m-2'>Apps</li></Link>
+      <Link><li className='m-2'>Installation</li></Link>
+    </>
     return (
         <div className='bg-base-100 shadow-xs'>
             <div className="navbar  max-w-11/12 mx-auto">
@@ -31,14 +36,17 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-medium">
-                        <li><a>Home</a></li>
-                        <li><a>Apps</a></li>
-                        <li><a>Installation</a></li>
+                        {
+                            links
+                           
+                        }
+                        
+                        
                     </ul>
                 </div>
                 <div className="navbar-end cursor-pointer">
                     {
-                        <Link to="https://github.com/Asif-Orbit/hero-app">
+                        <Link to="https://github.com/Asif-Orbit">
                             <p className="btn bg-gradient-to-r font-semibold text-[#FFFFFF] from-[#632EE3] to-[#9F62F2]"><FaGithub size={20} />Contribute</p>
                         </Link>
                     }
