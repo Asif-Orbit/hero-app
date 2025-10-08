@@ -2,9 +2,11 @@ import React from 'react';
 import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
 import demo1 from '../../assets/demo-app (1).webp'
+import { Link } from 'react-router';
 
 const HomeApp = ({appInfo}) => {
     return (
+        <Link to={`/apps/details/${appInfo.id}`}>
         <div className="card bg-base-100 p-4 shadow-sm">
     <img
       src={demo1}
@@ -22,6 +24,7 @@ const HomeApp = ({appInfo}) => {
         </div>
     </div>
   </div>
+        </Link>
 )};
 
 export default HomeApp;

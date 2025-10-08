@@ -2,6 +2,7 @@ import React, { use } from 'react';
 import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
 import demo1 from '../../assets/demo-app (1).webp'
+import { Link } from 'react-router';
 const AppData = ({ AppsDataPromise }) => {
     const AppsData = use(AppsDataPromise)
     return (
@@ -11,7 +12,8 @@ const AppData = ({ AppsDataPromise }) => {
             {
                 AppsData.map(data => {
                     return (
-                        <div className="card bg-base-100 p-4 shadow-sm" key={data.id}>
+                        <Link to={`/apps/details/${data.id}`} key={data.id}>
+                        <div className="card bg-base-100 p-4 shadow-sm" >
                             <img
                                 src={demo1}
                                 alt="Apps Logo"
@@ -28,6 +30,7 @@ const AppData = ({ AppsDataPromise }) => {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     )
                 })
             }
