@@ -13,25 +13,25 @@ import InstalledAppData from './Components/InstalledAppData/InstalledAppData';
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: App,
+    element: <App></App>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
-        Component: Home
+        element:<Home></Home>
       },
       {
         path: "/apps",
-        Component: Apps
+        element: <Apps></Apps>
       },
       {
         path: '/installation',
-        Component: InstalledAppData
+        element: <InstalledAppData></InstalledAppData>
       },
       {
         path: "/apps/details/:id",
         loader: () => fetch('/allData.json'),
-        Component: AppsDetails,
+        element:<AppsDetails></AppsDetails>,
         errorElement: <ErrorAppsPage></ErrorAppsPage>
       }
 

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import Banner from '../../Components/Banner/Banner';
 import Review from '../../Components/Review/Review';
 import HomeApps from '../../Components/HomeApps/HomeApps';
-const homeAppsDataPromise = fetch('firstEightData.json').then(res => res.json())
+const homeAppsDataPromise = fetch('/firstEightData.json').then(res => res.json())
 
 const Home = () => {
     return (
