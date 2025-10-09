@@ -45,7 +45,7 @@ const handleSort = (type) =>{
 }
 
     return (
-        <div className='w-11/12 mx-auto mt-10'>
+        <div className='w-11/12 mx-auto mt-10 min-h-100'>
             <div className='text-center mb-10'>
                 <h1 className='font-bold text-5xl text-[#001931]'>Your Installed Apps</h1>
                 <p className='text-[#627382] text-xl mb-10 mt-4'>Explore All Trending Apps on the Market developed by us</p>

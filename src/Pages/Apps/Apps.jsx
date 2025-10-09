@@ -1,6 +1,5 @@
-import React, { Suspense, use, useState } from 'react';
+import React, { Suspense, use, useEffect, useState } from 'react';
 import AppData from '../../Components/AppData/AppData';
-import { ImSearch } from 'react-icons/im';
 
 
 
@@ -9,8 +8,23 @@ const AppsDataPromise = fetch("/allData.json").then(res => res.json())
 const Apps = () => {
     const data = use(AppsDataPromise)
     const [search, setSearch] = useState("")
-    
-    
+    const [filteredApps, setFilteredApps] = useState(data);
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true)
+        const timer = setTimeout(() => {
+
+            const filteredApps = data.filter((app) =>
+                app.title.toLowerCase().includes(search.toLowerCase()))
+            setFilteredApps(filteredApps)
+            setLoading(false)
+        }, 200);
+
+
+
+        return () => clearTimeout(timer)
+    }, [search])
+
 
     return (
         <div className='w-11/12 mx-auto'>
@@ -37,9 +51,13 @@ const Apps = () => {
                 </label>
             </div>
 
-            <Suspense fallback={<div className='w-11/12 mx-auto text-center mt-10'><span className="loading loading-spinner loading-xl"></span></div>}>
-                <AppData AppsDataPromise={AppsDataPromise} search={search}></AppData>
-            </Suspense>
+            {
+                loading ? <div className='w-11/12 mx-auto text-center'><span className="loading loading-bars loading-xl"></span>
+                </div>
+                    : <Suspense fallback={<div className='w-11/12 mx-auto text-center mt-10'><span className="loading loading-spinner loading-xl"></span></div>}>
+                        <AppData AppsDataPromise={AppsDataPromise} filteredApps={filteredApps}></AppData>
+                    </Suspense>
+            }
 
 
 

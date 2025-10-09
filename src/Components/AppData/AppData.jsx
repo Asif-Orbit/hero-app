@@ -3,10 +3,9 @@ import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
 import { Link } from 'react-router';
 import ErrorAppsPage from '../../Pages/errorAppsPage/errorAppsPage';
-const AppData = ({ AppsDataPromise, search }) => {
-    const AppsData = use(AppsDataPromise)
-    const filteredApps = AppsData.filter((app) =>
-        app.title.toLowerCase().includes(search.toLowerCase()))
+const AppData = ({ filteredApps }) => {
+    
+    
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4'>
