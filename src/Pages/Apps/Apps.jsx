@@ -1,4 +1,4 @@
-import React, { Suspense, use } from 'react';
+import React, { Suspense, use, useState } from 'react';
 import AppData from '../../Components/AppData/AppData';
 import { ImSearch } from 'react-icons/im';
 
@@ -8,7 +8,9 @@ import { ImSearch } from 'react-icons/im';
 const AppsDataPromise = fetch("/allData.json").then(res => res.json())
 const Apps = () => {
     const data = use(AppsDataPromise)
-
+    const [search, setSearch] = useState("")
+    
+    
 
     return (
         <div className='w-11/12 mx-auto'>
@@ -31,12 +33,12 @@ const Apps = () => {
                             <path d="m21 21-4.3-4.3"></path>
                         </g>
                     </svg>
-                    <input type="search" required placeholder="Search" />
+                    <input type="search" value={search} onChange={(e) => setSearch(e.target.value)} required placeholder="Search" />
                 </label>
             </div>
 
             <Suspense fallback={<div className='w-11/12 mx-auto text-center mt-10'><span className="loading loading-spinner loading-xl"></span></div>}>
-                <AppData AppsDataPromise={AppsDataPromise}></AppData>
+                <AppData AppsDataPromise={AppsDataPromise} search={search}></AppData>
             </Suspense>
 
 

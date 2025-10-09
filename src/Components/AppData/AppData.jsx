@@ -2,14 +2,17 @@ import React, { use } from 'react';
 import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
 import { Link } from 'react-router';
-const AppData = ({ AppsDataPromise }) => {
+import ErrorAppsPage from '../../Pages/errorAppsPage/errorAppsPage';
+const AppData = ({ AppsDataPromise, search }) => {
     const AppsData = use(AppsDataPromise)
+    const filteredApps = AppsData.filter((app) =>
+        app.title.toLowerCase().includes(search.toLowerCase()))
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4'>
             
             {
-                AppsData.map(data => {
+                filteredApps.length > 0 ? filteredApps.map(data => {
                     return (
                         <Link to={`/apps/details/${data.id}`} key={data.id}>
                         <div className="card bg-base-100 p-4 shadow-sm" >
@@ -31,7 +34,8 @@ const AppData = ({ AppsDataPromise }) => {
                         </div>
                         </Link>
                     )
-                })
+                }): <div className='gird col-span-full'><ErrorAppsPage></ErrorAppsPage></div>
+                 
             }
 
         </div>
