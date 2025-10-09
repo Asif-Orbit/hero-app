@@ -18,7 +18,7 @@ const Apps = () => {
                 app.title.toLowerCase().includes(search.toLowerCase()))
             setFilteredApps(filteredApps)
             setLoading(false)
-        }, 200);
+        }, 300);
 
 
 

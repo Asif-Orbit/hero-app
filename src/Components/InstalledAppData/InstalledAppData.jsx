@@ -2,6 +2,7 @@ import React, { use, useEffect, useState } from 'react';
 import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
 import { getStoredData, removeAppData } from '../AddToDB/AddToDB';
+import { toast, ToastContainer } from 'react-toastify';
 const appsDataPromise = fetch('/allData.json').then(res => res.json())
 
 
@@ -16,12 +17,12 @@ const InstalledAppData = () => {
     }, [])
 
 
-    const handleUninstall = (id) => {
-        const appId = installApps.map(data => data.id)
-        const uninstallData = appId.filter(dataId => dataId !== id)
+    const handleUninstall = (app) => {
+       
+        const uninstallData = installApps.filter(dataId => dataId.id !== app.id)
         setInstallApps(uninstallData)
-        removeAppData(id)
-        window.location.reload()
+        removeAppData(app.id)
+        toast.success(`${app.title} App Uninstalled Successfully`)
     }
 const [sort,setSort]=useState("")
 const handleSort = (type) =>{
@@ -78,11 +79,11 @@ const handleSort = (type) =>{
                                 </div>
                             </div>
                         </div>
-                        <div><button onClick={() => handleUninstall(app.id)} className=" btn bg-[#00D390] text-white">Uninstall</button></div>
+                        <div><button onClick={() => handleUninstall(app)} className=" btn bg-[#00D390] text-white">Uninstall</button></div>
                     </div>
-
                 )
             })}
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

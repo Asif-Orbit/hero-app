@@ -5,7 +5,7 @@ import review from '../../assets/icon-review.png'
 import Rating from '../../Components/Rating/Rating';
 import { useLoaderData, useParams } from 'react-router';
 import { setAppData } from '../../Components/AddToDB/AddToDB';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 
 const AppsDetails = () => {
     const {id} = useParams();
@@ -13,9 +13,10 @@ const AppsDetails = () => {
     const data = useLoaderData();
     const appDetail = data.find(d => d.id === appId);
     const [disable, setDisable] = useState(true)
-    const handleStorageData =(id)=>{
+    const handleStorageData =(detail)=>{
         setDisable(false)
-        setAppData(id)
+        setAppData(detail.id)
+        toast.success(`${detail.title} Installed Successfully`)
     }
     
     
@@ -49,7 +50,7 @@ const AppsDetails = () => {
                                 </div>
                             </div>
                             {
-                                disable?<button onClick={()=> handleStorageData(appDetail.id)} className="btn bg-[#00D390] text-white">Install Now <span>({appDetail.size} MB)</span></button>:<button disable className="btn bg-[#00D390] text-white">Installed</button>
+                                disable?<button onClick={()=> handleStorageData(appDetail)} className="btn bg-[#00D390] text-white">Install Now <span>({appDetail.size} MB)</span></button>:<button disable className="btn bg-[#00D390] text-white">Installed</button>
                             }
                         </div>
                     </div>
