@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
     const links = <>
-        <ul className="flex ">
+        <ul className="flex flex-col lg:flex-row ">
             <li>
                 <NavLink to="/" className={({ isActive }) => isActive ? " font-semibold rounded-none border-b-2 border-[#9F62F2]  text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2]" : "text-[#00000090] font-medium"}>
                     Home
@@ -36,7 +36,7 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 font-medium shadow">
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-25 p-2 font-medium shadow">
                             {links}
                         </ul>
                     </div>

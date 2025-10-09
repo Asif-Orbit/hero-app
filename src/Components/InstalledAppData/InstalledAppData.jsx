@@ -35,6 +35,14 @@ const handleSort = (type) =>{
         const sortedBySize = [...installApps].sort((a,b)=> b.size - a.size)
         setInstallApps(sortedBySize)
     }
+    if(type === "Download (Low to High)"){
+        const sortedByDownload = [...installApps].sort((a,b)=> a.downloads -b.downloads)
+        setInstallApps(sortedByDownload)
+    }
+    if(type === "Download (High to Low)"){
+        const sortedByDownload = [...installApps].sort((a,b)=> b.downloads - a.downloads)
+        setInstallApps(sortedByDownload)
+    }
     if(type === "Ratings (Low to High)"){
         const sortedByRatings = [...installApps].sort((a,b)=> a.ratingAvg - b.ratingAvg)
         setInstallApps(sortedByRatings)
@@ -54,8 +62,10 @@ const handleSort = (type) =>{
             <div className='flex flex-col md:flex-row  justify-between items-center mb-5'>
                 <p className='text-2xl font-semibold text-[#001931] mb-4 md:mb-0'><span>({installApps.length})</span>Apps Found</p>
                 <details className="dropdown">
-                    <summary className="btn m-1">Sort by : {sort}</summary>
+                    <summary className="btn m-1">Sort by : {sort} </summary> 
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li onClick={()=>handleSort("Download (Low to High)")}><a>Download (Low to High)</a></li>
+                        <li onClick={()=>handleSort("Download (High to Low)")}><a>Download (High to low)</a></li>
                         <li onClick={()=>handleSort("Size (Low to High)")}><a>Size (Low to High)</a></li>
                         <li onClick={()=>handleSort("Size (High to Low)")}><a>Size (High to low)</a></li>
                         <li onClick={()=>handleSort("Ratings (Low to High)")}><a>Ratings (Low to High)</a></li>
@@ -72,8 +82,8 @@ const handleSort = (type) =>{
                             <div className='w-14 h-14 md:w-20 md:h-20'><img src={app.image} alt="" className='rounded-xl' /></div>
                             <div>
                                 <div><h2 className='text-[16px] md:text-xl font-medium text-[#001931] mb-3'>{app.title}</h2></div>
-                                <div className='flex  gap-4 text-xs md:text-[16px] font-medium'>
-                                    <p className='flex flex-col md:flex-row gap-1 items-center text-[#00D390]'><img src={download} alt="" className='w-4 h-4' /> <span>{app.downloads}</span></p>
+                                <div className='flex  gap-4 items-center text-xs md:text-[16px] font-medium'>
+                                    <p className='flex flex-col md:flex-row gap-1 items-center text-[#00D390]'><img src={download} alt="" className='w-4 h-4' /> <span>{app.downloads}M</span></p>
                                     <p className='flex flex-col md:flex-row gap-1 items-center text-[#FF8811]'><img src={rating} alt="" className='w-4 h-4' />{app.ratingAvg}</p>
                                     <p className='text-[#627382]'><span>{app.size}</span> MB</p>
                                 </div>
