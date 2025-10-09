@@ -24,7 +24,7 @@ const AppData = ({ filteredApps }) => {
                             </div>
                             <div className='flex justify-between items-center mt-4'>
                                 <div className='text-[#00D390] bg-[#F1F5E8] rounded-xl flex gap-1 items-center font-medium py-2 px-4 '>
-                                    <img src={download} alt="" className='w-4' /> <span>{data.downloads}</span>
+                                    <img src={download} alt="" className='w-4' /> <span>{data.downloads}M</span>
                                 </div>
                                 <div className='text-[#FF8811] bg-[#FFF0E1] flex gap-1 items-center font-medium py-2 px-4 rounded-xl'>
                                     <img src={rating} alt="" className='w-4' /> <span>{data.ratingAvg}</span>
