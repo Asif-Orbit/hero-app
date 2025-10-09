@@ -1,16 +1,26 @@
-# React + Vite
+# App Store Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧩 Description
+App Store Hub is a React-based web application that showcases a collection of apps with installation management, sorting, and live search features. The website includes multiple pages such as Home, All Apps, App Details, My Installation, and a custom Error page. It also supports `localStorage` persistence to keep installed apps even after page reloads.
 
-Currently, two official plugins are available:
+The project demonstrates React routing, state management, UI design using Tailwind CSS and DaisyUI, dynamic data handling, and Recharts visualization — all structured to create a functional and visually appealing app showcase experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies Used
+- **React.js** – Frontend library for building UI  
+- **React Router DOM v7** – Client-side routing  
+- **Tailwind CSS** – Utility-first CSS framework  
+- **DaisyUI** – Tailwind CSS component library  
+- **Recharts** – Data visualization for review charts  
+- **React Hot Toast** – For success and error notifications  
+- **LocalStorage API** – To persist installed apps  
+- **Vite** – Fast development build tool  
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+- 🧱 **Responsive Layout** with Header & Footer  
+- 🏠 **Home Page** with Banner and Top Apps Section  
+- 🔍 **All Apps Page** with Live Search & Sorting  
+- 📊 **App Details** with Ratings Chart and Install Button  
+- 💾 **LocalStorage** for Installed Apps  
+- ⚙️ **My Installation Page** with Uninstall Functionality  
+- 🌀 **Loading Animation** on Page Navigation & Search  
+- ❌ **Custom Error Page** for Invalid Routes

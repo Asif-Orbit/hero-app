@@ -1,18 +1,50 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
+import { NavLink } from 'react-router';
 
 const Footer = () => {
     return (
         <div className='bg-[#001931] mt-15'>
-            <footer className="flex justify-between sm:footer-horizontal  w-11/12 mx-auto text-neutral-content p-10">
-                <div className='flex gap-2 items-center'>
-                    <img src={logo} alt="" className='w-10 h-10'/>
+            <footer className="flex flex-col md:flex-row justify-between   w-11/12 mx-auto text-neutral-content p-10">
+                <div className='flex flex-col md:flex-row gap-2 items-center'>
+                    <img src={logo} alt="" className='w-10 h-10' />
                     <p className='font-bold text-white'>
                         HERO.IO
                     </p>
                 </div>
+                <div className='flex flex-col md:flex-row flex-1 justify-evenly'>
+                    <nav>
+                    <h6 className="footer-title">Services</h6>
+                    <ul>
+                        <li>
+                        <NavLink to="/" >
+                            Home
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/apps">
+                            Apps
+                        </NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink to="/installation" >
+                            Installation
+                        </NavLink>
+                    </li>
+                    </ul>
+                </nav>
+
+                <nav className='flex flex-col my-5 md:mt-0'>
+                    <h6 className="footer-title">Legal</h6>
+                    <a className="link link-hover">Terms of use</a>
+                    <a className="link link-hover">Privacy policy</a>
+                    <a className="link link-hover">Cookie policy</a>
+                </nav>
+                </div>
                 <nav>
-                    <h6 className=" mb-2">Social Links</h6>
+                    <h6 className=" mb-2 footer-title">Social Links</h6>
                     <div className="flex  gap-4">
                         <a>
                             <svg
