@@ -5,6 +5,7 @@ import review from '../../assets/icon-review.png'
 import Rating from '../../Components/Rating/Rating';
 import { useLoaderData, useParams } from 'react-router';
 import { setAppData } from '../../Components/AddToDB/AddToDB';
+import { ToastContainer } from 'react-toastify';
 
 const AppsDetails = () => {
     const {id} = useParams();
@@ -48,7 +49,7 @@ const AppsDetails = () => {
                                 </div>
                             </div>
                             {
-                                disable?<button onClick={()=> handleStorageData(appDetail.id)} className="btn bg-[#00D390] text-white">Install Now <span>({appDetail.size} MB)</span></button>:<button setDisable className="btn bg-[#00D390] text-white">Installed</button>
+                                disable?<button onClick={()=> handleStorageData(appDetail.id)} className="btn bg-[#00D390] text-white">Install Now <span>({appDetail.size} MB)</span></button>:<button disable className="btn bg-[#00D390] text-white">Installed</button>
                             }
                         </div>
                     </div>
@@ -58,7 +59,7 @@ const AppsDetails = () => {
                 <h1 className='text-2xl text-[#001931] font-semibold border-t-1 border-[#00193120] mt-10 pt-10 mb-6'>Description</h1>
                 <p className='text-xl text-[#627382]'>{appDetail.description}</p>
             </div>
-           
+           <ToastContainer></ToastContainer>
         </div>
     );
 };
