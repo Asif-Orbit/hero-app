@@ -1,4 +1,4 @@
-import { toast, ToastContainer } from "react-toastify";
+
 
 const getStoredData = () => {
     const storedData = localStorage.getItem("installApp");
@@ -13,7 +13,6 @@ const getStoredData = () => {
 const setAppData = (id) => {
     const storeAppData = getStoredData();
     if (storeAppData.includes(id)) {
-        toast.error("This App Already Installed")
         return;
 
     }
