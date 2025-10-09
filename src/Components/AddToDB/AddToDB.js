@@ -1,27 +1,33 @@
 import { toast, ToastContainer } from "react-toastify";
 
-const getStoredData =()=>{
+const getStoredData = () => {
     const storedData = localStorage.getItem("installApp");
-    if(storedData){
+    if (storedData) {
         const storedAppData = JSON.parse(storedData);
         return storedAppData;
     }
-    else{
+    else {
         return [];
     }
 }
-const setAppData = (id) =>{
+const setAppData = (id) => {
     const storeAppData = getStoredData();
-    if(storeAppData.includes(id)){
+    if (storeAppData.includes(id)) {
         toast.error("This App Already Installed")
         return;
-       
+
     }
-    else{
+    else {
         storeAppData.push(id);
         const data = JSON.stringify(storeAppData);
         localStorage.setItem("installApp", data)
     }
 }
- 
-export {setAppData,getStoredData};
+
+const removeAppData = (id) => {
+   const storedData = getStoredData();
+  const updatedData = storedData.filter(storedId => storedId !== id); 
+  const data = JSON.stringify(updatedData)
+  localStorage.setItem("installApp",data )
+}
+export { setAppData, getStoredData, removeAppData };
