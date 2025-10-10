@@ -2,7 +2,7 @@ import React from 'react';
 import {  Bar, BarChart, XAxis, YAxis } from 'recharts';
 
 const Rating = ({appDetail}) => {
-    const data = appDetail.ratings
+    const data = appDetail?.ratings
     return (
         <div>
             <h1 className='text-2xl text-[#001931] font-semibold border-t-1 border-[#00193120] mt-10 pt-10'>Rating</h1>
