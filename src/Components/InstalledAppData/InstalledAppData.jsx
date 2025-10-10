@@ -61,7 +61,7 @@ const handleSort = (type) =>{
             </div>
             <div className='flex flex-col md:flex-row  justify-between items-center mb-5'>
                 <p className='text-2xl font-semibold text-[#001931] mb-4 md:mb-0'><span>({installApps.length})</span>Apps Found</p>
-                <details className="dropdown">
+                <details className="dropdown mr-12">
                     <summary className="btn m-1">Sort by : {sort} </summary> 
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
                         <li onClick={()=>handleSort("Download (Low to High)")}><a>Download (Low to High)</a></li>
